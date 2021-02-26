@@ -56,8 +56,8 @@ function sumAndMultiply(a, b, c) {
 
   //console.log(sum(sum(4,7),5))
 
-  let sumpro = [sum(sum(4, 7)[0], 5)[0], multiply(multiply(4, 7)[0], 5)[0],
-    '4 and 7 and 5 sum to 16.', 'The product of 4 and 7 and 5 is 140.']
+  let sumpro = [sum(sum(a, b)[0], c)[0], multiply(multiply(a, b)[0], c)[0],`${a} and ${b} and ${c} sum to ${sum(sum(a, b)[0], c)[0]}.`,
+  `The product of ${a} and ${b} and ${c} is ${multiply(multiply(a, b)[0], c)[0]}.` ]
   return sumpro;
 
   //eslint-disable-line
@@ -147,7 +147,7 @@ function multiplyAnyArray(dynamicArray) {
   var value = dynamicArray[0];
 
   for (var i = 1; i < numberOfElements + 1; i++) {
-    product = multiply(value, i);
+    product = multiply(value, i); 
     value = product[0];
     console.log(`value is ${value}`);
   }
