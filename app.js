@@ -108,9 +108,10 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) {
-  let result5 = [multiply(multiply(2, 3)[0],4)[0], "The numbers 2,3,4 have a product of 24."]
-  return result5;
-
+ let productNumbers=1;
+ productNumbers=multiply(multArr[0],multArr[1])[0];
+ productNumbers=multiply(productNumbers,multArr[2])[0];
+ return [productNumbers, 'The numbers ' + multArr + ' have a product of ' + productNumbers + '.'];
   //eslint-disable-line
 }
 
